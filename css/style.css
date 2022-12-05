@@ -113,6 +113,20 @@
   text-align: right;
   padding-bottom: 20px;
 }
+.nhiemVu .row .col-10 .task .container .modal {
+  margin-top: 60px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.nhiemVu .row .col-10 .task .container .modal .modal-dialog .modal-content .modal-header .modal-title {
+  text-align: center;
+  color: black;
+  font-weight: 700;
+}
+.nhiemVu .row .col-10 .task .container .modal .modal-dialog .modal-content .modal-body .form_add_task form .form-title {
+  color: black;
+  font-weight: 700;
+  margin-top: 10px;
+}
 
 .footer {
   margin-top: 50px;

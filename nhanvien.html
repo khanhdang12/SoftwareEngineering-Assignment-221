@@ -106,29 +106,84 @@
                             <table class="table">
                                 <thead>
                                   <tr>
-                                    <th>Số thứ tự</th>
+                                    <th>Tên Công Việc</th>
                                     <th>Mô tả công việc</th>
-                                    <th>Check in</th>
-                                    <th>Check out</th>
-                                    
+                                    <th>MCP</th>
+                                    <th>Phương Tiện</th>
+                                    <th>Tuyến đường</th>
+                                    <th></th>
                                   </tr>
                                 </thead>
-                                <tbody class="tblTask">
+                                <tbody id="tbody" class="tblTask">
                                     <tr>
-                                    <td>1</td>
-                                    <td>Công việc hàng ngày 1/11/2022</td>
                                     <td></td>
                                     <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                      
+                                    
+                                    </td>
                                     </tr>
                                 </tbody>
                                 
                               </table>
                         </div>
                         <div class="button">
-                            <button class="btn btn-success">Thêm</button>
-                            <button class="btn btn-danger">Xóa</button>
-                            <button class="btn btn-primary">Sửa</button>
-    
+                          <button class="btn btn-success" id="themTask" onclick="themForm()">Thêm</button>
+                        </div>
+                        
+                        <div id="form" class="modal" tabindex="-1">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title">Thêm công việc</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeForm()"></button>
+                              </div>
+                              <div class="modal-body">
+                                <div class = "form_add_task"> 
+                                
+                                
+                                  <form>
+                                      <label class="form-title"> Tên công việc: </label> <br>
+                                
+                                      <input id="tenTask" type = "text"> <br>
+                                
+                                      <label class="form-title"> Mô tả công việc: </label> <br>
+                                      <input id="desc"  type = "text"> <br>
+                                
+                                      <label class="form-title"> Chọn MCP </label> <br>
+                                      <select id = "lst_MCP_options">
+                                          <option value = "MCP 1"> MCP 1</option>
+                                          <option value = "MCP 2"> MCP 2</option>
+                                          <option value = "..."> ... </option>
+                                          <option value = "MCP n"> MCP n </option>
+                                      </select> <br> 
+                                
+                                      <label class="form-title"> Chọn phương tiện </label> <br>
+                                      <select id = "lst_vehicle_options">
+                                          <option value = "Xe 1"> Xe 1 </option>
+                                          <option value = "Xe 2"> Xe 2 </option>
+                                          <option value = "..."> ... </option>
+                                          <option value = "Xe n"> Xe n </option>
+                                      </select> <br>
+                                
+                                      <label class="form-title"> Tuyến đường </label> <br>
+                                      <input id="tuyenDuong" type = "text"> <br>
+                                      <button class="btn btn-warning mt-2 form-title" >Tạo tuyến đường</button>
+                                
+                                      
+                                    
+                                  </form>
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeForm()">Đóng</button>
+                                <button id="xac-nhan" type="button" class="btn btn-primary">Xác nhận</button>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -183,6 +238,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
+  <script src="./models/Task.js"></script>
+  <script src="./assets/js/nhanVien.js"></script>
 </body>
 
 </html>

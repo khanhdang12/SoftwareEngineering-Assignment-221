@@ -9,8 +9,8 @@ btnThongBao.onclick = function(){
 
     //output: ketQua:string
     //process:xử lý
-    if (taiKhoan==='admin'&&matKhau==='hehe'){
-        window.location="index.html"
+    if (taiKhoan==='admin'&& matKhau==='123'){
+        window.location="index.html";
     }
     else{
         btnThongBao.innerHTML = 'Login unsuccessful';
