@@ -1,5 +1,5 @@
 var arrTask=[];
-function themForm (){
+function themForm(){
     document.getElementById('form').style.display='block';
 
 }
@@ -53,6 +53,7 @@ function xoaTask(tenTask){
     renderTask(arrTask);
 }
 function suaTask(tenTask){
+    document.getElementById('form').style.display='block';
     var indexEdit=-1;
     for (var index=0;index<arrTask.length;i++){
         var taskTrongMang = arrTask[index];
@@ -62,14 +63,16 @@ function suaTask(tenTask){
         }
     }
     if(indexEdit!=-1){
+        
         document.getElementById('tenTask').value = arrTask[indexEdit].tenTask;
         document.getElementById('desc').value = arrTask[indexEdit].desc;
         document.getElementById('lst_MCP_options').value = arrTask[indexEdit].MCP;
         document.getElementById('lst_vehicle_options').value = arrTask[indexEdit].phuongTien;
         document.getElementById('tuyenDuong').value = arrTask[indexEdit].tuyenDuong;
-
+        
+        
     }
-
+    renderTask(arrTask);
 }
 function closeForm(){
     var form = document.getElementById('form');
