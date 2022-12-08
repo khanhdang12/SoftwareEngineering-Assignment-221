@@ -185,6 +185,57 @@
                             </div>
                           </div>
                         </div>
+                        <div id="form-sua" class="modal" tabindex="-1">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title">Thêm công việc</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeFormSua()"></button>
+                              </div>
+                              <div class="modal-body">
+                                <div class = "form_add_task"> 
+                                
+                                
+                                  <form>
+                                      <label class="form-title"> Tên công việc: </label> <br>
+                                
+                                      <input id="tenTask" type = "text"> <br>
+                                
+                                      <label class="form-title"> Mô tả công việc: </label> <br>
+                                      <input id="desc"  type = "text"> <br>
+                                
+                                      <label class="form-title"> Chọn MCP </label> <br>
+                                      <select id = "lst_MCP_options">
+                                          <option value = "MCP 1"> MCP 1</option>
+                                          <option value = "MCP 2"> MCP 2</option>
+                                          <option value = "..."> ... </option>
+                                          <option value = "MCP n"> MCP n </option>
+                                      </select> <br> 
+                                
+                                      <label class="form-title"> Chọn phương tiện </label> <br>
+                                      <select id = "lst_vehicle_options">
+                                          <option value = "Xe 1"> Xe 1 </option>
+                                          <option value = "Xe 2"> Xe 2 </option>
+                                          <option value = "..."> ... </option>
+                                          <option value = "Xe n"> Xe n </option>
+                                      </select> <br>
+                                
+                                      <label class="form-title"> Tuyến đường </label> <br>
+                                      <input id="tuyenDuong" type = "text"> <br>
+                                      <button class="btn btn-warning mt-2 form-title" >Tạo tuyến đường</button>
+                                
+                                      
+                                    
+                                  </form>
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeFormSua()">Đóng</button>
+                                <button id="btnCapNhat" type="button" class="btn btn-primary" >Cập Nhật</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>

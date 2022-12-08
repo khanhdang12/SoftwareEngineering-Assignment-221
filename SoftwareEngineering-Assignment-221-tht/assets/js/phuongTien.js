@@ -15,9 +15,9 @@ document.getElementById('xac-nhan').onclick=function(){
 
 
     arrPhuongTien.push(xe);
-    renderTask(arrPhuongTien);
+    renderPhuongTien(arrPhuongTien);
 }
-function renderTask(arrPhuongTien){
+function renderPhuongTien(arrPhuongTien){
     var contentHTML='';
     for (var index=0;index<arrPhuongTien.length;index++){
         var phuongTien = arrPhuongTien[index];
@@ -34,8 +34,8 @@ function renderTask(arrPhuongTien){
         </td>
         <td>
           <div class="button">
-            <button class="btn btn-danger" onclick="xoaTask('${phuongTien.id}')">Xóa</button>
-            <button class="btn btn-primary" onclick="suaTask('${phuongTien.id}')">Sửa</button>
+            <button class="btn btn-danger" onclick="xoaPhuongTien('${phuongTien.id}')">Xóa</button>
+            <button class="btn btn-primary" onclick="suaPhuongTien('${phuongTien.id}')">Sửa</button>
         </div>
         </td>
         </tr>
@@ -46,7 +46,8 @@ function renderTask(arrPhuongTien){
     document.getElementById('tbody').innerHTML = contentHTML;
     document.getElementById('form').style.display='none';
 }
-function xoaTask(id){
+function xoaPhuongTien(id){
+    console.log(id);
     var indexDel=-1;
     for (var index=0;index<arrPhuongTien.length;i++){
         var xeTrongMang =  arrPhuongTien[index];
@@ -56,9 +57,12 @@ function xoaTask(id){
         }
     }
     arrPhuongTien.splice(indexDel,1);
-    renderTask(arrPhuongTien);
+    renderPhuongTien(arrPhuongTien);
 }
-function suaTask(id){
+function xoaDefault(){
+    document.getElementById('default').innerHTML='';
+}
+function suaPhuongTien(id){
     document.getElementById('form').style.display='block';
     var indexEdit=-1;
     for (var index=0;index<arrPhuongTien.length;i++){
@@ -80,7 +84,7 @@ function suaTask(id){
         
         
     }
-    renderTask(arrPhuongTien);
+    renderPhuongTien(arrPhuongTien);
 }
 function closeForm(){
     var form = document.getElementById('form');

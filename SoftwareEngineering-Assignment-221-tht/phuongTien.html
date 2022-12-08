@@ -98,7 +98,7 @@
                                     <th></th>
                                   </tr>
                                 </thead>
-                                <tbody class="tblTask">
+                                <tbody id="default" class="tblTask">
                                     <tr>
                                     <td>1</td>
                                     <td>G63-2020</td>
@@ -108,133 +108,13 @@
                                     <td>Không hoạt động</td>
                                     <td>
                                       <div class="button">
-                                        <button class="btn btn-danger" onclick="xoaTask('${congViec.tenTask}')">Xóa</button>
-                                        <button class="btn btn-primary" onclick="suaTask('${congViec.tenTask}')">Sửa</button>
+                                        <button class="btn btn-danger" onclick="xoaDefault()">Xóa</button>
+                                        <button class="btn btn-primary" onclick="suaDefault()">Sửa</button>
                                     </div>
                                     </td>
                                     </tr>
                                 </tbody>
 
-                                <tbody class="tblTask">
-                                  <tr>
-                                  <td>2</td>
-                                  <td>G63-2020</td>
-                                  <td>51G-00002</td>
-                                  <td>3000kg</td>
-                                  <td>8.9L/100km</td>
-                                  <td>Đang hoạt động</td>
-                                  <td>
-                                    <div class="button">
-                                      <button class="btn btn-danger" onclick="xoaTask('${congViec.tenTask}')">Xóa</button>
-                                      <button class="btn btn-primary" onclick="suaTask('${congViec.tenTask}')">Sửa</button>
-                                  </div>
-                                  </td>
-                                  </tr>
-                                </tbody>
-
-                                <tbody class="tblTask">
-                                  <tr>
-                                  <td>3</td>
-                                  <td>G63-2020</td>
-                                  <td>51G-00003</td>
-                                  <td>3000kg</td>
-                                  <td>8.9L/100km</td>
-                                  <td>Không hoạt động</td>
-                                  <td>
-                                    <div class="button">
-                                      <button class="btn btn-danger" onclick="xoaTask('${congViec.tenTask}')">Xóa</button>
-                                      <button class="btn btn-primary" onclick="suaTask('${congViec.tenTask}')">Sửa</button>
-                                  </div>
-                                  </td>
-                                  </tr>
-                                </tbody>
-
-
-                                <tbody class="tblTask">
-                                  <tr>
-                                  <td>4</td>
-                                  <td>G63-2020</td>
-                                  <td>51G-00004</td>
-                                  <td>3000kg</td>
-                                  <td>8.9L/100km</td>
-                                  <td>Đang hoạt động</td>
-                                  <td>
-                                    <div class="button">
-                                      <button class="btn btn-danger" onclick="xoaTask('${congViec.tenTask}')">Xóa</button>
-                                      <button class="btn btn-primary" onclick="suaTask('${congViec.tenTask}')">Sửa</button>
-                                  </div>
-                                  </td>
-                                  </tr>
-                              </tbody>
-
-
-                              <tbody class="tblTask">
-                                <tr>
-                                <td>5</td>
-                                <td>G63-2021</td>
-                                <td>51H-00001</td>
-                                <td>2990kg</td>
-                                <td>7.9L/100km</td>
-                                <td>Đang hoạt động</td>
-                                <td>
-                                  <div class="button">
-                                    <button class="btn btn-danger" onclick="xoaTask('${congViec.tenTask}')">Xóa</button>
-                                    <button class="btn btn-primary" onclick="suaTask('${congViec.tenTask}')">Sửa</button>
-                                </div>
-                                </td>
-                                </tr>
-                              </tbody>
-
-                              <tbody class="tblTask">
-                                <tr>
-                                <td>6</td>
-                                <td>G63-2021</td>
-                                <td>51H-00002</td>
-                                <td>2990kg</td>
-                                <td>7.9L/100km</td>
-                                <td>Đang hoạt động</td>
-                                <td>
-                                  <div class="button">
-                                    <button class="btn btn-danger" onclick="xoaTask('${congViec.tenTask}')">Xóa</button>
-                                    <button class="btn btn-primary" onclick="suaTask('${congViec.tenTask}')">Sửa</button>
-                                </div>
-                                </td>
-                                </tr>
-                              </tbody>
-
-                              <tbody class="tblTask">
-                                <tr>
-                                <td>7</td>
-                                <td>G63-2021</td>
-                                <td>51H-00003</td>
-                                <td>2990kg</td>
-                                <td>7.9L/100km</td>
-                                <td>Không hoạt động</td>
-                                <td>
-                                  <div class="button">
-                                    <button class="btn btn-danger" onclick="xoaTask('${congViec.tenTask}')">Xóa</button>
-                                    <button class="btn btn-primary" onclick="suaTask('${congViec.tenTask}')">Sửa</button>
-                                </div>
-                                </td>
-                                </tr>
-                              </tbody>
-
-                              <tbody class="tblTask">
-                                <tr>
-                                <td>8</td>
-                                <td>G63-2021</td>
-                                <td>51H-00004</td>
-                                <td>2990kg</td>
-                                <td>7.9L/100km</td>
-                                <td>Không hoạt động</td>
-                                <td>
-                                  <div class="button">
-                                    <button class="btn btn-danger" onclick="xoaTask('${congViec.tenTask}')">Xóa</button>
-                                    <button class="btn btn-primary" onclick="suaTask('${congViec.tenTask}')">Sửa</button>
-                                </div>
-                                </td>
-                                </tr>
-                              </tbody>
                               <tbody id="tbody" class="tblTask">
                                 <tr>
                                   <td></td>
@@ -244,6 +124,7 @@
                                   <td></td>
                                   <td>
                                   </td>
+                                  <td></td>
                                   </tr>
                               </tbody>
                           

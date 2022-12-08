@@ -53,7 +53,7 @@ function xoaTask(tenTask){
     renderTask(arrTask);
 }
 function suaTask(tenTask){
-    document.getElementById('form').style.display='block';
+    document.getElementById('form-sua').style.display='block'
     var indexEdit=-1;
     for (var index=0;index<arrTask.length;i++){
         var taskTrongMang = arrTask[index];
@@ -71,10 +71,45 @@ function suaTask(tenTask){
         document.getElementById('tuyenDuong').value = arrTask[indexEdit].tuyenDuong;
         
         
+        
     }
+    renderTask(arrTask);
+}
+document.getElementById('btnCapNhat').onclick = function(){
+    //lấy thông tin người dùng thay đổi để update lại mảng
+    document.getElementById('form-sua').style.display='block';
+    var taskUpdate = new Task();
+    taskUpdate.tenTask = document.getElementById('tenTask').value;
+    taskUpdate.desc = document.getElementById('desc').value;
+    taskUpdate.MCP = document.getElementById('lst_MCP_options').value;
+    taskUpdate.phuongTien = document.getElementById('lst_vehicle_options').value;
+    taskUpdate.tuyenDuong = document.getElementById('tuyenDuong').value;
+   
+    
+
+    for (var index=0;index<arrTask.length;index++){
+        var taskTrongMang = arrTask[index];
+        if (taskTrongMang.tenSinhVien==taskUpdate.tenTask){
+            //tiến hành cập nhật
+            taskTrongMang.tenTask = taskUpdate.tenTask;
+            taskTrongMang.desc = taskUpdate.desc;
+            taskTrongMang.MCP = taskUpdate.MCP;
+            taskTrongMang.phuongTien = taskUpdate.phuongTien;
+            taskTrongMang.tuyenDuong = taskUpdate.tuyenDuong;
+           
+
+
+            break;
+        }
+    }
+    //render lại giao diện
     renderTask(arrTask);
 }
 function closeForm(){
     var form = document.getElementById('form');
+    form.style.display = 'none';
+}
+function closeFormSua(){
+    var form = document.getElementById('form-sua');
     form.style.display = 'none';
 }

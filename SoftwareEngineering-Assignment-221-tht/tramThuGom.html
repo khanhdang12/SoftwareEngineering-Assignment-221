@@ -94,96 +94,91 @@
                                     <th>Vị trí</th>
                                     <th>Trạng thái rác thải</th>
                                     <th>Lần cuối được thu gom</th>
+                                    <th></th>
                                     
                                   </tr>
                                 </thead>
-                                <tbody class="tblTask">
+                                <tbody id="default" class="tblTask">
                                   <tr>
                                   <td>1</td>
                                   <td>Trạm số 1</td>
                                   <td>10.826927, 106.723107</td>
                                   <td>70%</td> 
                                   <td>3:00:00 trước</td>
+                                  <td>
+                                    <div class="button">
+                                      <button class="btn btn-danger"onclick="xoaDefault()">Xóa</button>
+                                      <button class="btn btn-primary">Sửa</button>
+                                    </div>
+                                  </td>
                                   </tr>
                                 </tbody>
+                                
 
-                                <tbody class="tblTask">
-                                  <tr>
-                                  <td>2</td>
-                                  <td>Trạm số 2</td>
-                                  <td>10.814631, 106.627111</td>
-                                  <td>60%</td> 
-                                  <td>2:45:00 trước</td>
-                                  </tr>
-                                </tbody>
+                               
 
-                                <tbody class="tblTask">
+                                <tbody id="tbody" class="tblTask">
                                   <tr>
-                                  <td>3</td>
-                                  <td>Trạm số 3</td>
-                                  <td>10.877755, 106.618897</td>
-                                  <td>50%</td> 
-                                  <td>2:30:00 trước</td>
-                                  </tr>
-                                </tbody>
-
-                                <tbody class="tblTask">
-                                  <tr>
-                                  <td>4</td>
-                                  <td>Trạm số 4</td>
-                                  <td>10.777279, 106.541643</td>
-                                  <td>40%</td> 
-                                  <td>2:15:00 trước</td>
-                                  </tr>
-                                </tbody>
-
-                                <tbody class="tblTask">
-                                  <tr>
-                                  <td>5</td>
-                                  <td>Trạm số 5</td>
-                                  <td>10.766337, 106.683317</td>
-                                  <td>30%</td> 
-                                  <td>2:00:00 trước</td>
-                                  </tr>
-                                </tbody>
-
-                                <tbody class="tblTask">
-                                  <tr>
-                                  <td>6</td>
-                                  <td>Trạm số 6</td>
-                                  <td>10.905784, 106.779711</td>
-                                  <td>20%</td> 
-                                  <td>1:45:00 trước</td>
-                                  </tr>
-                                </tbody>
-
-                                <tbody class="tblTask">
-                                  <tr>
-                                  <td>7</td>
-                                  <td>Trạm số 7</td>
-                                  <td>10.851333, 106.757200</td>
-                                  <td>20%</td> 
-                                  <td>1:30:00 trước</td>
-                                  </tr>
-                                </tbody>
-
-                                <tbody class="tblTask">
-                                  <tr>
-                                  <td>8</td>
-                                  <td>Trạm số 1</td>
-                                  <td>10.771332, 106.722539</td>
-                                  <td>15%</td> 
-                                  <td>1:15:00 trước</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td> 
+                                  <td></td>
+                                  <td></td>
                                   </tr>
                                 </tbody>
                         
                               </table>
                         </div>
                         <div class="button">
-                            <button class="btn btn-success">Thêm</button>
-                            <button class="btn btn-danger">Xóa</button>
-                            <button class="btn btn-primary">Sửa</button>
+                            <button class="btn btn-success"id="themTask" onclick="themForm()">Thêm</button>
+                            
     
+                        </div>
+                        <div id="form" class="modal" tabindex="-1">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title">Thêm trạm thu gom</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="closeForm()"></button>
+                              </div>
+                              <div class="modal-body">
+                                <div class = "form_add_task"> 
+                                
+                                
+                                  <form>
+                                      <label class="form-title">Số thứ tự</label> <br>
+                                
+                                      <input id="id" type = "text"> <br>
+                                
+                                      <label class="form-title">Tên trạm</label> <br>
+                                      <input id="ten"  type = "text"> <br>
+                                
+                                      <label class="form-title">Vị trí</label> <br>
+                                      <input id = "viTri"  type = "text"> <br>
+                                     
+                                
+                                      <label class="form-title">Trạng thái rác thải </label> <br>
+                                      <input id = "trangThai"  type = "text"> <br>
+                                     
+                                
+                                      <label class="form-title">Lần cuối được thu gom</label> <br>
+                                      <input id="thuGom" type = "text"> <br>
+                      
+                                      
+                                      
+                                
+                                      
+                                    
+                                  </form>
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeForm()">Đóng</button>
+                                <button id="xac-nhan" type="button" class="btn btn-primary">Xác nhận</button>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -238,8 +233,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
-  <script src="./models/Task.js"></script>
-  <script src="./assets/js/nhanVien.js"></script>
+  <script src="./models/TramThuGom.js"></script>
+  <script src="./assets/js/tramThuGom.js"></script>
 </body>
 
 </html>
